@@ -1,9 +1,9 @@
 # BACKUPNINJA's are after YOU@!
 
-FROM ubuntu:14.04
+FROM ubuntu:22.10
 
 RUN apt-get update && \
-    apt-get install openssh-client debconf-utils duplicity genisoimage rdiff-backup rsync trickle gzip bzip2 cron dialog -y && \
+    apt-get install ssmtp openssh-client debconf-utils duplicity genisoimage rdiff-backup rsync trickle gzip bzip2 cron dialog -y && \
     ## Here are defined extras depending on the sort of backups youll be having the ninjas run ;)
     apt-get install mysql-client postgresql-client subversion subversion-tools -y && \
     apt-get build-dep backupninja -y && \
